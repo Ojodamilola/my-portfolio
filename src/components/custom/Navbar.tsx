@@ -41,7 +41,7 @@ export default function Navbar() {
           style={{ fontFamily: "'Fraunces', serif" }}
         >
           <span>{CONTENT.name}</span>
-          <span className="text-primary transition-transform duration-300 group-hover:scale-125">
+          <span className="text-primary transition-transform duration-300 ">
             {CONTENT.dot}
           </span>
         </a>

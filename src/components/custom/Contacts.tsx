@@ -101,7 +101,7 @@ export default function Contact() {
                   className="card-glossy group flex items-center justify-between rounded-full px-4 py-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-primary/40 active:translate-y-0.5"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-border bg-secondary/50 transition-transform duration-200 group-hover:scale-110">
+                    <span className="flex size-8 shrink-0 items-center justify-center rounded-full border border-border bg-secondary/50 transition-transform duration-200 ">
                       <Icon className="size-4" style={{ color: channel.iconColor }} />
                     </span>
                     <span className="text-sm font-semibold text-foreground whitespace-nowrap">

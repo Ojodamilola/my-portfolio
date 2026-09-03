@@ -7,7 +7,6 @@ import {
   LayoutDashboard,
   Palette,
   Server,
- 
 } from "lucide-react";
 
 interface Direction {
@@ -19,7 +18,6 @@ interface Direction {
   icon: typeof Code2;
   overview: string;
   points: { title: string; desc: string }[];
- 
 }
 
 const DIRECTIONS: Direction[] = [
@@ -46,7 +44,6 @@ const DIRECTIONS: Direction[] = [
         desc: "Type safety from client to database, sub-second queries, and automated testing pipelines.",
       },
     ],
-
   },
   {
     id: "saas",
@@ -71,7 +68,6 @@ const DIRECTIONS: Direction[] = [
         desc: "Granular permissions, OAuth/SSO login flows, and enterprise data isolation.",
       },
     ],
-   
   },
   {
     id: "ui-experience",
@@ -96,7 +92,6 @@ const DIRECTIONS: Direction[] = [
         desc: "WCAG AAA compliant contrast, full keyboard navigation, screen reader support, and meta SEO.",
       },
     ],
-  
   },
 ];
 
@@ -107,7 +102,10 @@ export default function BuildDirection() {
   const ActiveIcon = activeDirection.icon;
 
   return (
-    <section id="build-directions" className="relative px-4 py-20 md:py-24">
+    <section
+      id="build-directions"
+      className="relative scroll-mt-28 px-4 py-16 sm:py-20 md:py-24"
+    >
       <div className="mx-auto max-w-6xl">
         {/* Section Header */}
         <div className="mx-auto max-w-3xl text-center">
@@ -128,28 +126,25 @@ export default function BuildDirection() {
         </div>
 
         {/* Interactive Grid: 3 Clickable Divs on Left, 1 Reveal Content Div on Right */}
-     <div className="mt-12 grid gap-6 md:grid-cols-[1.1fr_1.5fr] md:items-stretch lg:grid-cols-[0.85fr_1.6fr]"> 
-      
+        <div className="mt-12 grid gap-6 md:grid-cols-[1.1fr_1.5fr] md:items-stretch lg:grid-cols-[0.85fr_1.6fr]">
           {/* Left Column: 3 Interactive Clickable Cards */}
           <div className="flex flex-col gap-1.5 bg-card/40 rounded-3xl p-1.5 ">
             {DIRECTIONS.map((direction) => {
               const isSelected = direction.id === activeId;
-             
+
               return (
                 <button
                   key={direction.id}
                   type="button"
                   onClick={() => setActiveId(direction.id)}
-                  className={`group relative flex w-full flex-col rounded-3xl p-3 text-left transition-all duration-300 ${
+                  className={`group relative flex w-full flex-col rounded-3xl p-3 text-left transition-all duration-200  transform-gpu ${
                     isSelected
-  ? "card-glossy ring-2 ring-primary/60 shadow-xl"
-  : "border border-border/0 bg-card/10 hover:border-primary/30"
+                      ? "card-glossy ring-2 ring-primary/60 shadow-xl"
+                      : "border border-border/0 bg-card/10 hover:border-primary/30"
                   }`}
                 >
-
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                     
                       <div>
                         <h3
                           className="text-lg font-bold tracking-tight text-foreground sm:text-xl"
@@ -203,7 +198,7 @@ export default function BuildDirection() {
                   </div>
                   <div>
                     <span className="text-xs font-semibold tracking-wider text-primary uppercase">
-                     {activeDirection.tag}
+                      {activeDirection.tag}
                     </span>
                     <h3
                       className="text-lg font-bold tracking-tight text-foreground sm:text-xl mb-0"
@@ -240,8 +235,6 @@ export default function BuildDirection() {
                 ))}
               </div>
             </div>
-
-           
           </div>
         </div>
       </div>

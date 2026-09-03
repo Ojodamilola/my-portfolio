@@ -110,7 +110,7 @@ export default function Hero() {
                   <img
                     src={currentHeroImg}
                     alt="Damilola - Portfolio Hero"
-                    className="h-full w-full object-cover object-top transition-all duration-500 hover:scale-102"
+                    className="h-full w-full object-cover object-top transition-all duration-500 "
                   />
                   {/* Subtle glossy glass reflection overlay */}
                   <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-background/80 via-transparent to-white/10" />
