@@ -26,10 +26,11 @@ function App() {
           <Hero />
           <TechMarquee />
           <BuildDirection />
-          <About />
+         
           <Work />
           <Services />
           <Experience />
+           <About />
           <Contact />
         </main>
         <Footer />

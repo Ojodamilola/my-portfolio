@@ -1,4 +1,4 @@
-import { ArrowDown, Mail, Sparkles, Code2, Layers, Cpu, ArrowUpRight } from "lucide-react";
+import { ArrowDown, Sparkles, Code2, Layers, Cpu, ArrowUpRight } from "lucide-react";
 import meLight from "../../assets/me-light.png";
 import meDark from "../../assets/me-dark.png";
 import { useTheme } from "../../hooks/useTheme";
