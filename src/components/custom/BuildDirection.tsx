@@ -142,22 +142,14 @@ export default function BuildDirection() {
                   onClick={() => setActiveId(direction.id)}
                   className={`group relative flex w-full flex-col rounded-3xl p-3 text-left transition-all duration-300 ${
                     isSelected
-                      ? "card-glossy ring-2 ring-primary/60 shadow-xl scale-[1.01]"
-                      : "border border-border/0 bg-card/10 hover:border-primary/30 hover:scale-[1.005]"
+  ? "card-glossy ring-2 ring-primary/60 shadow-xl"
+  : "border border-border/0 bg-card/10 hover:border-primary/30"
                   }`}
                 >
 
                   <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                      {/* <div
-                        className={`flex size-8 items-center justify-center rounded-2xl transition-colors ${
-                          isSelected
-                            ? "bg-primary text-primary-foreground shadow-sm"
-                            : "border border-border bg-secondary/50 text-foreground group-hover:text-primary"
-                        }`}
-                      >
-                        <Icon className="size-3" />
-                      </div> */}
+                     
                       <div>
                         <h3
                           className="text-lg font-bold tracking-tight text-foreground sm:text-xl"

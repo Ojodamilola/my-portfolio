@@ -158,8 +158,8 @@
   }
 
   ::selection {
-    background: color-mix(in oklab, var(--accent) 45%, transparent);
-    color: var(--foreground);
+    background: var(--accent);
+    color: var(--background);
   }
 }
 
