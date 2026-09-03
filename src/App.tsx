@@ -6,7 +6,7 @@ import BuildDirection from "#components/custom/BuildDirection";
 import About from "#components/custom/About";
 import Work from "#components/custom/Work";
 import Services from "#components/custom/Services";
-import Experience from "#components/custom/Experience";
+// import Experience from "#components/custom/Experience";
 import Contact from "#components/custom/Contacts";
 import Footer from "#components/custom/Footer";
 
@@ -29,7 +29,7 @@ function App() {
          
           <Work />
           <Services />
-          <Experience />
+          {/* <Experience /> */}
            <About />
           <Contact />
         </main>

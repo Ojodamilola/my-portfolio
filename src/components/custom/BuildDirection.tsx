@@ -211,7 +211,7 @@ export default function BuildDirection() {
                   </div>
                   <div>
                     <span className="text-xs font-semibold tracking-wider text-primary uppercase">
-                      Direction {activeDirection.number} • {activeDirection.tag}
+                     {activeDirection.tag}
                     </span>
                     <h3
                       className="text-lg font-bold tracking-tight text-foreground sm:text-xl mb-0"

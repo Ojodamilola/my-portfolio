@@ -97,14 +97,14 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="card-glossy absolute top-20 left-4 right-4 z-50 flex flex-col gap-2 rounded-3xl p-6 backdrop-blur-2xl md:hidden">
-          <ul className="flex flex-col gap-2">
+        <div className="absolute top-20 left-4 right-4 z-50 flex flex-col gap-2 rounded-3xl p-6 backdrop-blur-2xl md:hidden">
+          <ul className="flex flex-col gap-2  ">
             {CONTENT.links.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block rounded-xl px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-secondary/40"
+                  className="block card-glossy rounded-full px-4 py-3 text-base font-medium text-foreground hover:border-primary hover:-translate-y-1 transition"
                 >
                   {link.label}
                 </a>
