@@ -1,23 +1,35 @@
-import { ArrowDown, Sparkles, Code2, Layers, Cpu, ArrowUpRight } from "lucide-react";
+import {
+
+  Sparkles,
+  
+  ArrowUpRight,
+
+  Zap,
+} from "lucide-react";
 import meLight from "../../assets/me-light.png";
 import meDark from "../../assets/me-dark.png";
 import { useTheme } from "../../hooks/useTheme";
 
 const CONTENT = {
-  badge: "Available for new opportunities — 2026",
-  titlePrefix: "Crafting modern,",
-  titleAccent: "tactile interfaces",
-  titleSuffix: "with refined engineering.",
+  badge: "Product Builder",
+  titlePrefix: "I build fast,",
+  titleAccent: "reliable software",
+  titleSuffix: "that grow your business",
   intro:
-    "I bridge high-end visual aesthetics with full-stack performance. Designing calm, sophisticated digital products and systems that look effortless and scale seamlessly.",
-  primaryCta: "Start a Project",
+    "Modern web apps and SaaS, mobile products for growing businesses, founders, and agency teams who need dependable execution from day one",
+
+  primaryCta: "Discuss your Project",
   primaryHref: "#contact",
   secondaryCta: "View Projects",
   secondaryHref: "#work",
   stats: [
-    { value: "4+ Years", label: "Full-Stack Experience", icon: Code2 },
-    { value: "30+ Built", label: "Completed Projects", icon: Layers },
-    { value: "99.9%", label: "Uptime & Quality Focus", icon: Cpu },
+    { value: "3+ Years", label: "Building for real use" },
+    {
+      value: "Fast Turnaround",
+      label: "On-time delivery"
+     
+    },
+    { value: "100%", label: "Clean, scalable & maintainable code"},
   ],
 };
 
@@ -26,7 +38,10 @@ export default function Hero() {
   const currentHeroImg = theme === "dark" ? meDark : meLight;
 
   return (
-    <section id="top" className="relative overflow-hidden px-4 pt-32 pb-20 sm:pt-40 md:pt-44 md:pb-28">
+    <section
+      id="top"
+      className="relative overflow-hidden px-4 pt-32 pb-20 sm:pt-40 md:pt-44 md:pb-28"
+    >
       {/* Background ambient lighting glows */}
       <div className="pointer-events-none absolute top-1/4 left-1/2 -z-10 h-96 w-[90%] max-w-4xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-3xl" />
 
@@ -50,9 +65,7 @@ export default function Hero() {
               style={{ fontFamily: "'Fraunces', serif" }}
             >
               {CONTENT.titlePrefix}{" "}
-              <span className="text-primary italic">
-                {CONTENT.titleAccent}
-              </span>{" "}
+              <span className="text-primary italic">{CONTENT.titleAccent}</span>{" "}
               {CONTENT.titleSuffix}
             </h1>
 
@@ -68,7 +81,7 @@ export default function Hero() {
                 className="btn-glossy inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold tracking-wide"
               >
                 {CONTENT.primaryCta}
-                <ArrowDown className="size-4" />
+                <Zap className="size-4" />
               </a>
 
               <a
@@ -82,19 +95,25 @@ export default function Hero() {
 
             {/* Stats row */}
             <div className="mt-12 grid w-full grid-cols-3 gap-3 border-t border-border pt-8 sm:gap-4">
-              {CONTENT.stats.map((stat) => (
-                <div key={stat.label} className="card-glossy rounded-2xl p-4 sm:p-5">
+              {CONTENT.stats.map((stat) => {
+              
+                return (
                   <div
-                    className="text-2xl font-bold tracking-tight text-primary sm:text-3xl"
-                    style={{ fontFamily: "'Fraunces', serif" }}
-                  >
-                    {stat.value}
+                    key={stat.label}
+                    className="card-glossy rounded-2xl p-4 sm:p-5"
+                  ><div
+                        className="text-sm font-bold tracking-tight text-primary sm:text-xl"
+                        style={{ fontFamily: "'Fraunces', serif" }}
+                      >
+                        {stat.value}
+                      </div>
+                    
+                    <div className="mt-1 text-[10px] font-light text-muted-foreground uppercase sm:text-[12px]">
+                      {stat.label}
+                    </div>
                   </div>
-                  <div className="mt-1 text-xs font-medium text-muted-foreground">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 

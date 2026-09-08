@@ -4,9 +4,9 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle2,
-  LayoutDashboard,
-  Palette,
-  Server,
+  Rocket,
+  Building2,
+  Users,
 } from "lucide-react";
 
 interface Direction {
@@ -21,75 +21,75 @@ interface Direction {
 }
 
 const DIRECTIONS: Direction[] = [
-  {
-    id: "technical",
+ {
+    id: "startups",
     number: "01",
-    tag: "Core Engineering",
-    title: "Technical Role & Full-Stack Systems",
-    subtitle: "Frontend, Backend, Databases & Scalable Architecture",
-    icon: Server,
+    tag: "Startups & Solopreneurs",
+    title: "Launch-Ready MVPs & Product Builds",
+    subtitle: "From rough idea to a working product in market quickly",
+    icon: Rocket,
     overview:
-      "Bridging clean client interfaces with secure, reliable backend infrastructure. I engineer full-stack systems designed for maintainability, zero-latency state sync, and dependable business logic.",
+      "You have an idea and need to test it with paying users, not spend six months in development. I turn your product concept into a clean, functional web or mobile app so you can launch, gather feedback, and start generating revenue.",
     points: [
       {
-        title: "Frontend Precision",
-        desc: "Modern React 19, TypeScript strict mode, responsive layouts, and clean state machines.",
+        title: "Fast Time-to-Market",
+        desc: "Focusing strictly on core features that matter so you launch in weeks, not months.",
       },
       {
-        title: "Backend & Database Architecture",
-        desc: "Robust REST & GraphQL APIs, relational database design with PostgreSQL, caching, and auth.",
+        title: "Clean, Modern Frontend",
+        desc: "A responsive, professional web interface that builds instant credibility with early users.",
       },
       {
-        title: "Performance & Reliability",
-        desc: "Type safety from client to database, sub-second queries, and automated testing pipelines.",
+        title: "Ready for Growth",
+        desc: "Built on solid foundations so you do not have to throw it away and rebuild when users start pouring in.",
       },
     ],
   },
-  {
-    id: "saas",
+{
+    id: "agencies",
     number: "02",
-    tag: "Product Platforms",
-    title: "SaaS Dashboards, CMS & Portals",
-    subtitle: "Enterprise Tools, Admin Workflows & Content Engines",
-    icon: LayoutDashboard,
+    tag: "Design & Creative Agencies",
+    title: "Reliable White-Label Development",
+    subtitle: "Bringing your client designs to life with zero drama",
+    icon: Users,
     overview:
-      "Building complex, data-intensive web applications that make complicated workflows feel simple, fast, and delightful for business users and power admins.",
+      "You have the designs, client deadlines, and creative vision; you need an engineer who can turn them into reality without dropping the ball. I act as an extension of your team, delivering pixel-accurate frontend and stable code on schedule.",
     points: [
       {
-        title: "Interactive Dashboards & Analytics",
-        desc: "Real-time telemetry, filterable data tables, metric cards, and responsive charting engines.",
+        title: "Accurate Design Implementation",
+        desc: "Your designs translated into clean, interactive screens that look and feel exactly as intended.",
       },
       {
-        title: "Headless CMS & Commerce",
-        desc: "Custom editorial workflows, headless Shopify/WordPress integrations, and multi-tenant portals.",
+        title: "Deadlines Respected",
+        desc: "Clear updates, zero disappearing acts, and predictable deliveries that protect your agency's reputation.",
       },
       {
-        title: "Security & Role-Based Access",
-        desc: "Granular permissions, OAuth/SSO login flows, and enterprise data isolation.",
+        title: "Plug-and-Play Integration",
+        desc: "I adapt to your workflow, hand off clean code, and handle client revisions smoothly.",
       },
     ],
   },
   {
-    id: "ui-experience",
+    id: "businesses",
     number: "03",
-    tag: "Tactile Experience",
-    title: "Product UI, Design Systems & Interaction",
-    subtitle: "Micro-interactions, Accessibility & Design Tokens",
-    icon: Palette,
+    tag: "Small & Growing Businesses",
+    title: "Custom Business Systems & Portals",
+    subtitle: "Automating workflows, client portals, and web platforms",
+    icon: Building2, // or Briefcase / ShieldCheck
     overview:
-      "Creating memorable digital products with tactile feedback, considered micro-animations, and bulletproof design token foundations that scale across entire engineering organizations.",
+      "Out-of-the-box software often creates more manual work than it saves. I build custom dashboards, booking systems, and customer portals designed around your exact day-to-day operations so your team can work faster.",
     points: [
       {
-        title: "Tactile Design Tokens",
-        desc: "Harmonious color scales, glossy 3D lighting models, and systematic typography rhythm.",
+        title: "Workflow Automation",
+        desc: "Replace chaotic spreadsheets and manual tasks with a streamlined, centralized system.",
       },
       {
-        title: "Fluid Micro-Interactions",
-        desc: "Physics-based hover animations, smooth page transitions, and tactile button states.",
+        title: "Intuitive Team & Customer Frontend",
+        desc: "Simple, easy-to-use screens so staff and customers can use the system with zero training.",
       },
       {
-        title: "Accessibility (a11y) & SEO",
-        desc: "WCAG AAA compliant contrast, full keyboard navigation, screen reader support, and meta SEO.",
+        title: "Secure & Low Maintenance",
+        desc: "Reliable platforms with rock-solid security, automated backups, and minimal upkeep required.",
       },
     ],
   },
@@ -144,10 +144,9 @@ export default function BuildDirection() {
                   }`}
                 >
                   <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <div>
+                    <div>
                         <h3
-                          className="text-lg font-bold tracking-tight text-foreground sm:text-xl"
+                          className={`text-lg font-bold tracking-tight text-foreground sm:text-xl ${isSelected ? "text-primary" : ""}`}
                           style={{ fontFamily: "'Fraunces', serif" }}
                         >
                           {direction.title}
@@ -156,16 +155,7 @@ export default function BuildDirection() {
                           {direction.subtitle}
                         </p>
                       </div>
-                    </div>
-
-                    <span
-                      className={`text-xs font-bold tracking-widest ${
-                        isSelected ? "text-primary" : "text-muted-foreground/40"
-                      }`}
-                      style={{ fontFamily: "'Fraunces', serif" }}
-                    >
-                      {direction.number}
-                    </span>
+                    
                   </div>
 
                   <div className="mt-1 flex items-center justify-between border-t border-border/60 pt-1">

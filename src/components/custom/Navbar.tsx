@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 pt-4 sm:pt-6">
       <nav
-        className={`card-glossy flex w-full max-w-4xl items-center justify-between rounded-full px-5 py-3 backdrop-blur-xl transition-all duration-300 ${
+        className={`card-glossy flex w-full max-w-4xl items-center justify-between rounded-full px-5 py-3 backdrop-blur-sm transition-all duration-300 ${
           scrolled ? "shadow-2xl py-2.5" : ""
         }`}
       >

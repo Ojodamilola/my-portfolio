@@ -215,7 +215,7 @@ hr{
 
 /* Custom Glossy Utilities */
 .card-glossy {
-  background-color: var(--card);
+  background-color: color-mix(in srgb, var(--card) 20%, transparent);
   border: 1px solid var(--border);
   box-shadow: var(--card-shadow);
 }
